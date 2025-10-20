@@ -373,19 +373,6 @@ The service account now needs at least `pubsub.topics.create`. Debezium will cre
 - Debezium stopped unexpectedly: check `docker compose logs debezium` for the underlying exception (topic missing, network errors, etc.).
 - Stale offsets: Delete the contents of `debezium/data/` (offset and history files) if you need a clean re-snapshot (the directory is bind-mounted to persist state).
 
-## Cleanup
-
-```bash
-cd debezium
-docker compose down -v
-```
-
-Remove the Pub/Sub resources if you created them manually:
-
-```bash
-gcloud pubsub subscriptions delete cdc-tutorial-inventory-orders-sub
-gcloud pubsub topics delete cdc.tutorial.inventory.orders
-```
 
 Repite la eliminación para cada tópico y suscripción adicional que hayas creado por tabla.
 
