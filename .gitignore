@@ -1,0 +1,31 @@
+# OS / editor
+.DS_Store
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Docker / runtime
+*.log
+logs/
+*.tmp
+
+# Debezium / estado local
+debezium/data/
+data/
+pgdata/
+
+# Credenciales / secretos
+.env
+.env.*
+*.pem
+*.p12
+*.crt
+*.key
+**/key.json
+secrets*.json
+
+# Node/others (por si agregas tooling)
+node_modules/
